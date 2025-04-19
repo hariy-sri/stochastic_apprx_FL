@@ -1,0 +1,30 @@
+---
+
+num_rounds: 20
+num_clients: 10
+batch_size: 100
+num_classes: 10
+num_clients_per_round_fit: 10
+num_clients_per_round_eval: 10
+fraction_fit: 1.0
+fraction_evaluate: 1.0
+config_fit:
+  lr: 1.0
+  momentum: 0.0
+  weight_decay: 0.0
+  local_epochs: 3
+  proximal_mu: 0.0 # Fedprox
+
+seed: 42
+partitioner: N-IID
+alpha: 0.1
+data_path: ./data
+method: double_dominant #single_dominant or double_dominant
+stochastic: per_epoch
+
+defaults:
+  - _self_
+  - model: ffnn
+  - strategy: fedavg # points to conf/strategy/{strategy}.yaml
+  - dataset: mnist # Default dataset configuration
+  - client: fedavg # default client config

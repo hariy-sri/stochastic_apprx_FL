@@ -1,0 +1,2 @@
+name: fmnist
+path: ${data_path}
