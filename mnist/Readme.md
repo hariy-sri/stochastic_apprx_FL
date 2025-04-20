@@ -18,13 +18,6 @@ This repository contains a federated learning simulation using the MNIST dataset
 - **Convergence**: The global model parameters converge to a point where the combined influence of Client 1 and half of Client 2's influence is balanced..
 - **Learning Rate Decay**: For Client 1, the learning rate decays as $lr = \frac{lr}{iter^{3/4}}$ . For Client 2, it decays as $lr = \frac{lr}{2*iter^{3/4}}$. For other clients, it decays as $lr = \frac{lr}{iter}$.
 
-## Simulation Details
-
-- **Dataset**: The MNIST dataset is used, which consists of handwritten digit images.
-- **Model**: A simple Feedforward Neural Network is employed for classification tasks.
-- **Gradient Norms**: Instead of plotting individual gradients, the norm of the gradients is plotted to visualize convergence.
-- **Test Loss**: The test loss is plotted to evaluate the model's performance over time.
-
 ## Usage
 
 1. **Dependencies**: Ensure you have the required Python packages installed. You can install them using:

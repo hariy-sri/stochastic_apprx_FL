@@ -19,14 +19,6 @@ This repository contains two Python scripts, `CODE_1.py` and `CODE_2.py`, which 
 - **Learning Rate Decay**: For Client 1, the learning rate decays as $lr = \frac{lr}{iter^{3/4}}$ . For Client 2, it decays as $lr = \frac{lr}{2*iter^{3/4}}$. For other clients, it decays as $lr = \frac{lr}{iter}$.
 - **Convergence**: The global model parameters converge to a point where the combined gradient of Client 1 and half of Client 2's gradient is zero.
 
-
-## Simulation Details
-
-- **Data Generation**: Synthetic data is generated for each client using the `generate_and_save_client_data` function in `utils.py`.
-- **Gradient Descent**: The scripts use mini-batch stochastic gradient descent (SGD) to update model parameters.
-- **Global Aggregation**: After local updates, the global model parameters are aggregated using a weighted sum based on the data size of each client.
-- **Metrics and Plots**: The scripts save the trajectories of model parameters and gradients, and generate plots to visualize convergence.
-
 ## Usage
 
 1. **Dependencies**: Ensure you have the required Python packages installed. You can install them using:
